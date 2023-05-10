@@ -1,6 +1,7 @@
 import "./globals.css"
 import Navbar from "./components/Navbar"
 import Background from "./components/Background"
+import ProfilePic from "./components/ProfilePic"
 
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
         <Background />
         <div>
           <Navbar />
+          <ProfilePic />
           {children}
         </div>
       </body>

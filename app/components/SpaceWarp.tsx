@@ -6,11 +6,20 @@ import { useFrame } from "@react-three/fiber";
 import { Bloom, ChromaticAberration, EffectComposer } from "@react-three/postprocessing";
 import * as THREE from "three";
 
-const COUNT = 500;
+const COUNT = 2500;
 const XY_BOUNDS = 40;
-const Z_BOUNDS = 20;
-const MAX_SPEED_FACTOR = 2;
-const MAX_SCALE_FACTOR = 50;
+const Z_BOUNDS = 25;
+
+/*
+    Originally I had the speed factor set to 2 and the scale factor set to 50 so it would feel like
+    in the Star Wars movies/shows when ships would exit a hyperspace jump - think of looking out of
+    the cockpit of the Millennium Falcon and all the stars warping past them. I lowered these values,
+    however, as the flashing lights, due to the added effects, have the potential to trigger 
+    photosensitive epilepsy. If you want to achieve such an effect, or see it in action, I highly
+    recommend changing the values or checking out o2bomb's GitHub repo titled "space-warp" 
+*/
+const MAX_SPEED_FACTOR = 0.1;
+const MAX_SCALE_FACTOR = 10;
 const CHROMATIC_ABBERATION_OFFSET = 0.007;
 
 const generatePosition = () => (Math.random() - 0.5) * XY_BOUNDS;
