@@ -13,7 +13,11 @@ module.exports = {
       "light-orange": "#FFD580",
       "grey": "#777777"
     },
-    extend: {},
+    extend: {
+      cursor: {
+        auto: "url(/public/zanpakuto.cur), auto",
+      }
+    },
   },
   plugins: [
     require("@tailwindcss/typography"),

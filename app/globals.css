@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 a {
     @apply hover:text-orange
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    cursor: url(../public/zanpakuto.cur), auto;
+}

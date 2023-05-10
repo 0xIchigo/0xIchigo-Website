@@ -17,8 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Background />
-        <div>
+        <div className="h-full w-full">
+          <div className="block fixed top-0 left-0 z-[-100]">
+            <Background />
+          </div>
           <Navbar />
           <ProfilePic />
           {children}

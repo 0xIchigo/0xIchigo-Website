@@ -7,7 +7,7 @@ import { Bloom, ChromaticAberration, EffectComposer } from "@react-three/postpro
 import * as THREE from "three";
 
 const COUNT = 2500;
-const XY_BOUNDS = 40;
+const XY_BOUNDS = 80;
 const Z_BOUNDS = 25;
 
 /*
