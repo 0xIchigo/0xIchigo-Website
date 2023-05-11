@@ -1,10 +1,10 @@
 "use client";
 
+import * as THREE from "three";
 import { useEffect, useRef } from "react";
 import { BlendFunction, ChromaticAberrationEffect } from "postprocessing";
 import { useFrame } from "@react-three/fiber";
 import { Bloom, ChromaticAberration, EffectComposer } from "@react-three/postprocessing";
-import * as THREE from "three";
 
 const COUNT = 2500;
 const XY_BOUNDS = 80;

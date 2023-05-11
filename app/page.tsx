@@ -8,10 +8,22 @@ export default function Home() {
           </h2>
         </div>
         <p className="prose text-black px-2">
-          This site is dedicated for my personal portfolio and blog (nonsensical ramblings on various technical and philosophical topics specifically regarding, and adjacent to, blockchains, cybersecurity, smart contracts, economics, law, and politics)
+          This site is dedicated for my personal portfolio and blog (nonsensical ramblings on various technical and philosophical topics, including those related to and neighboring blockchains, cybersecurity, smart contracts, economics, law, and politics)
         </p>
       </div>
-      <hr />
+      <hr className="h-px my-4 w-48 bg-white border border-white" />
+      <div className="bg-white border border-dark-green m-1 mt-3">
+        <div className="bg-light-green">
+          <h2 className="prose text-dark-green px-2">
+            Aesthetics -<span className="font-Aurebesh"> Aesthetics</span>
+          </h2>
+        </div>
+        <p className="prose text-black px-2">
+          This site is draws upon cybercore, early MySpace, and 4chan aesthetics to elicit a surreal browsing experience rooted in nostalgia, which is transposed upon a 
+          futurist embrace of the emerging hyperreality latent in the web<span>&#39;</span>s networks. Here, you can engage in the knowledge and culture of lucid virtuality, 
+          tapping into an emerging shared consciousness, all from the comfort of your personal computer 
+        </p>
+      </div>
     </main>
   )
 }
