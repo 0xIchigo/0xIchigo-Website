@@ -1,10 +1,12 @@
 export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center p-4">
-      <div className="p-4 m-auto place-content-center bg-black bg-opacity-95">
-        <article className="prose text-white">
-          <div>
-            <p>Hello there! Welcome to a slice of cyberspace dedicated for my portfolio and blog (nonsensical ramblings on various technical and philosophical topics)</p>
+      <div className="bg-black bg-opacity-95 border border-dark-green">
+        <article className="prose text-black bg-light-green">
+          <div className="bg-dark-green p-2 mt-0 mb-0">
+            <p className="m-0">
+              Hello there! Welcome to a slice of cyberspace dedicated for my portfolio and blog (nonsensical ramblings on various technical and philosophical topics)
+            </p>
           </div>
           <ul>
             <li>My name is Evan, but online I go by the pseudonym Ichigo</li>

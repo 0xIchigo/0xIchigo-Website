@@ -2,19 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 a {
     @apply hover:text-orange
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     margin: 0;
 }
 
 body {
-    cursor: url(../public/zanpakuto.cur), auto;
+    cursor: url(../public/cursors/zanpakuto.cur), auto;
+}
+
+@layer base {
+    @font-face {
+        font-family: "MS Gothic";
+        src: url(../public/fonts/MSGothic.ttf) format("woff2");
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+    }
 }

@@ -11,11 +11,16 @@ module.exports = {
       "white": "#FFFFFF",
       "orange": "#FF6700",
       "light-orange": "#FFD580",
-      "grey": "#777777"
+      "grey": "#777777",
+      "dark-green": "#2f4d0c",
+      "light-green": "#b9d9b7",
     },
     extend: {
       cursor: {
         auto: "url(/public/zanpakuto.cur), auto",
+      },
+      fontFamily: {
+        MSGothic: "MS Gothic"
       }
     },
   },
