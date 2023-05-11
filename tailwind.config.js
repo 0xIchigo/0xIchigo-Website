@@ -20,7 +20,8 @@ module.exports = {
         auto: "url(/public/zanpakuto.cur), auto",
       },
       fontFamily: {
-        MSGothic: "MS Gothic"
+        MSGothic: "MS Gothic",
+        Aurebesh: "Aurebesh"
       }
     },
   },

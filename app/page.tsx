@@ -1,7 +1,23 @@
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center items-center p-4">
-      <div className="bg-black bg-opacity-95 border border-dark-green">
+    <main className="flex flex-col justify-center items-center p-4 max-w-5xl mx-auto">
+      <div className="bg-white border border-dark-green m-1">
+        <div className="bg-dark-green">
+          <h2 className="prose text-white px-2">
+            Welcome to Ichigo<span>&#39;</span>s cyberspace -<span className="font-Aurebesh"> welcome!</span>
+          </h2>
+        </div>
+        <p className="prose text-black px-2">
+          This site is dedicated for my personal portfolio and blog (nonsensical ramblings on various technical and philosophical topics specifically regarding, and adjacent to, blockchains, cybersecurity, smart contracts, economics, law, and politics)
+        </p>
+      </div>
+      <hr />
+    </main>
+  )
+}
+
+/*
+  <div className="bg-black bg-opacity-95 border border-dark-green">
         <article className="prose text-black bg-light-green">
           <div className="bg-dark-green p-2 mt-0 mb-0">
             <p className="m-0">
@@ -20,6 +36,4 @@ export default function Home() {
           </ul>
         </article>
       </div>
-    </main>
-  )
-}
+*/

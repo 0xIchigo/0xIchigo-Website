@@ -2,18 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-a {
-    @apply hover:text-orange
-}
-
 html,
 body {
     width: 100%;
     height: 100%;
     margin: 0;
-}
-
-body {
     cursor: url(../public/cursors/zanpakuto.cur), auto;
 }
 
@@ -25,4 +18,16 @@ body {
         font-display: swap;
         font-style: normal;
     }
+
+    @font-face {
+        font-family: "Aurebesh";
+        src: url(../public/fonts/Aurebesh.otf) format("woff2");
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+    }
+}
+
+a {
+    @apply hover:text-orange
 }
