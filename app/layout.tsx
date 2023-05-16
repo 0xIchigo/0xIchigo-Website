@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Background from "./components/Background";
 import ProfilePic from "./components/ProfilePic";
+import Footer from "./components/Footer";
 
 
 export const metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
           <Navbar />
           <ProfilePic />
           {children}
+          <Footer />
         </div>
       </body>
     </html>
