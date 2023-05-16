@@ -16,7 +16,7 @@ export default function Home() {
         </p>
       </div>
       <hr className="h-px my-4 w-48 bg-white border border-white" />
-      <div className="bg-white border border-dark-green m-1 mt-3">
+      <div className="bg-white border border-dark-green m-1 mt-2">
         <div className="bg-light-green mb-2">
           <h2 className="prose text-dark-green px-2">
             Aesthetics -<span className="font-Aurebesh"> Aesthetics</span>
