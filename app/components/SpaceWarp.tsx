@@ -2,9 +2,9 @@
 
 import * as THREE from "three";
 import { useEffect, useRef } from "react";
-import { BlendFunction, ChromaticAberrationEffect } from "postprocessing";
 import { useFrame } from "@react-three/fiber";
 import { Bloom, ChromaticAberration, EffectComposer } from "@react-three/postprocessing";
+import { BlendFunction, ChromaticAberrationEffect } from "postprocessing";
 
 const COUNT = 2500;
 const XY_BOUNDS = 80;

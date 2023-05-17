@@ -1,6 +1,5 @@
 import Image from "next/image";
 import MusicPlayer from "./components/MusicPlayer";
-import Posts from "./components/Posts";
 
 export default function Home() {
   return (
@@ -36,7 +35,6 @@ export default function Home() {
           and culture of lucid virtuality, tapping into a shared consciousness rooted in network spirituality, all from the comfort of your personal computer
         </p>
       </div>
-      <Posts />
     </main>
   )
 }

@@ -6,8 +6,7 @@ export default function Posts() {
     const posts = getSortedPostsData();
 
     return (
-        <section className="mt-6 mx-auto max-w-2xl text-white">
-            <h2 className="text-4xl font-bold">Blog</h2>
+        <section className="mx-auto max-w-2xl text-black">
             <ul className="w-full">
                 {posts.map(post => (
                     <ListItem key={post.id} post={post} />

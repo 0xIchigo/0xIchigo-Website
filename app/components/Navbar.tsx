@@ -7,9 +7,9 @@ export default function Navbar() {
                 <div className="flex items-center justify-between h-16">
                     <Link href="/" className="sm:text-2xl text-lg font-semibold text-white hover:text-orange mr-2 no-underline">0xIchigo</Link>
                     <div className="flex space-x-4">
-                        <Link href="/" className="text-white sm:text-xl text-lg no-underline">About</Link>
-                        <Link href="/" className="text-white sm:text-xl text-lg no-underline">Projects</Link>
-                        <Link href="/" className="text-white sm:text-xl text-lg no-underline">Blog</Link>
+                        <Link href="/about" className="text-white sm:text-xl text-lg no-underline">About</Link>
+                        <Link href="/projects" className="text-white sm:text-xl text-lg no-underline">Projects</Link>
+                        <Link href="/blog" className="text-white sm:text-xl text-lg no-underline">Blog</Link>
                     </div>
                 </div>
             </div>
