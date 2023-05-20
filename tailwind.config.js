@@ -31,11 +31,22 @@ module.exports = {
             },
             p: {
               marginBottom: "0.5rem",
+              code: {
+                backgroundColor: "#b9d9b7",
+                paddingRight: "0.25rem",
+                paddingLeft: "0.25rem",
+                '&::before': {
+                  content: '"" !important',
+                },
+                '&::after': {
+                  content: '"" !important',
+                },
+              }
             },
             pre: {
               backgroundColor: "#b9d9b7",
               color: "#000000",
-            }
+            },
           }
         }
       }
