@@ -22,6 +22,22 @@ module.exports = {
       fontFamily: {
         MSGothic: "MS Gothic",
         Aurebesh: "Aurebesh"
+      },
+      typography: {
+        lg: {
+          css: {
+            h1: {
+              marginBottom: "0.5rem",
+            },
+            p: {
+              marginBottom: "0.5rem",
+            },
+            pre: {
+              backgroundColor: "#b9d9b7",
+              color: "#000000",
+            }
+          }
+        }
       }
     },
   },

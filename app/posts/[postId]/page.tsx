@@ -47,10 +47,10 @@ export default async function Post({ params }: { params: { postId: string } }) {
                         {title} - <span className="font-Aurebesh">{title}</span>
                     </h2>
                 </div>
-                <div className="prose italic px-2 pb-2">
+                <div className="prose italic px-2 pb-2 ml-4">
                     published on {pubDate}
                 </div>
-                <article className="text-black p-2 prose prose-lg">
+                <article className="text-black p-2 prose prose-lg ml-4">
                     <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
                 </article>
                 <p className="pb-2">

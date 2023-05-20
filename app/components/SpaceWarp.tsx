@@ -110,9 +110,7 @@ export const SpaceWarp = ({ }: SceneProps) => {
                 <meshBasicMaterial color={[1.5, 1.5, 1.5]} toneMapped={false} />
             </instancedMesh>
             <EffectComposer>
-                {/* @ts-ignore*/}
                 <Bloom luminanceThreshold={0.2} mipmapBlur />
-                {/* @ts-ignore*/}
                 <ChromaticAberration
                     ref={effectsRef as any}
                     blendFunction={BlendFunction.NORMAL} // Blend mode
@@ -122,6 +120,8 @@ export const SpaceWarp = ({ }: SceneProps) => {
                             CHROMATIC_ABBERATION_OFFSET
                         )
                     }
+                    modulationOffset={0.15}
+                    radialModulation={false}
                 />
             </EffectComposer>
         </>
