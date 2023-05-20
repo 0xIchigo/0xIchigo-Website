@@ -14,13 +14,13 @@ export default function Projects() {
                     </h1>
                 </div>
                 <div className="prose px-2 pt-2 min-w-full mb-2">
-                    <h2 className="mb-2">
-                        <a href="https://github.com/0xIchigo/IchiChain" className="flex flex-row items-center">
+                    <h2 className="flex flex-row items-center mb-2">
+                        <a href="https://github.com/0xIchigo/IchiChain" className="mr-2">
                             IchiChain
-                            <FaPython
-                                className="ml-2 items-center"
-                            />
                         </a>
+                        <FaPython
+                            className="ml-2"
+                        />
                     </h2>
                     <p className="prose text-black">
                         IchiChain is a rudimentary Proof of Stake blockchain coded in Python. The purpose of the project was to deepen my understanding of how blockchains
@@ -29,13 +29,13 @@ export default function Projects() {
                     </p>
                 </div>
                 <div className="prose px-2 pt-2 min-w-full mb-2">
-                    <h2 className="mb-2">
-                        <a href="https://github.com/0xIchigo/Data-Structures-and-Algorithms-in-Rust" className="flex flex-row items-center">
+                    <h2 className="flex flex-row items-center mb-2">
+                        <a href="https://github.com/0xIchigo/Data-Structures-and-Algorithms-in-Rust" className="mr-2">
                             Data Structures and Algorithms in Rust
-                            <FaRust
-                                className="ml-2 items-center"
-                            />
                         </a>
+                        <FaRust
+                            className="ml-2"
+                        />
                     </h2>
                     <p className="prose text-black">
                         A collection of data structures and algorithms coded in Rust. The purpose of this project was to better understand how to solve common coding problems
@@ -47,13 +47,13 @@ export default function Projects() {
                     </p>
                 </div>
                 <div className="prose px-2 pt-2 min-w-full mb-2">
-                    <h2 className="mb-2">
-                        <a href="https://github.com/0xIchigo/Breakout" className="flex flex-row items-center">
+                    <h2 className="flex flex-row items-center mb-2">
+                        <a href="https://github.com/0xIchigo/Breakout" className="mr-2">
                             Breakout
-                            <FaRust
-                                className="ml-2 items-center"
-                            />
                         </a>
+                        <FaRust
+                            className="ml-2"
+                        />
                     </h2>
                     <p className="prose text-black">
                         A rendition of Atari<span>&#39;</span>s classic coded in Rust using the Macroquad game engine. The purpose of this project was to replicate a classic
@@ -62,25 +62,25 @@ export default function Projects() {
                     </p>
                 </div>
                 <div className="prose px-2 pt-2 min-w-full mb-2">
-                    <h2 className="mb-2">
-                        <a href="https://github.com/0xIchigo/Data-Structures-and-Algorithms-in-Rust" className="flex flex-row items-center">
+                    <h2 className="flex flex-row items-center mb-2">
+                        <a href="https://github.com/0xIchigo/Data-Structures-and-Algorithms-in-Rust" className="mr-2">
                             This website!
-                            <SiNextdotjs
-                                className="ml-2 items-center"
-                            />
-                            <SiTypescript
-                                className="ml-2 items-center"
-                            />
-                            <SiTailwindcss
-                                className="ml-2 items-center"
-                            />
-                            <SiPnpm
-                                className="ml-2 items-center"
-                            />
-                            <TbBrandThreejs
-                                className="ml-2 items-center"
-                            />
                         </a>
+                        <SiNextdotjs
+                            className="ml-2"
+                        />
+                        <SiTypescript
+                            className="ml-2"
+                        />
+                        <SiTailwindcss
+                            className="ml-2"
+                        />
+                        <SiPnpm
+                            className="ml-2"
+                        />
+                        <TbBrandThreejs
+                            className="ml-2"
+                        />
                     </h2>
                     <p className="prose text-black">
                         The purpose of this site is to have a slice of cyberspace that consolidates my personal portfolio and blog in a surreal browsing experience. This site
