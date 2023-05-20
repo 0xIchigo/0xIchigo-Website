@@ -24,6 +24,13 @@ module.exports = {
         Aurebesh: "Aurebesh"
       },
       typography: {
+        DEFAULT: {
+          css: {
+            p: {
+              minWidth: "100%",
+            }
+          }
+        },
         lg: {
           css: {
             h1: {
