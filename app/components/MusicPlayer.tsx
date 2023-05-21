@@ -15,6 +15,17 @@ const playlist: { name: string, src: string }[] = [
     { name: "DESTROY The Wired by TOKYOPILL", src: "https://od.lk/s/MThfNDEzODAzNDJf/DESTROY%20The%20Wired.mp3" }
 ];
 
+const playlistIchigo: { name: string, src: string }[] = [
+    { name: "Arc [prod. Ichigo]", src: "https://od.lk/s/MThfNDE0MTIxMjFf/Arc%20%5Bprod.%20Ichigo%5D.wav" },
+    { name: "Destined [prod. Ichigo]", src: "https://od.lk/s/MThfNDE0MTIxMjRf/Destined.wav" },
+    { name: "Fatty Back Pt. 2 - Angel Mane, 3m & Madara TBH (prod. Ichigo)", src: "https://od.lk/s/MThfNDE0MTIxMjVf/Fatty%20Back%20Pt.2%20%28Angel%20Mane%2C%203m%2C%20Madara%20TBH%29%20%28online-audio-converter.com%29.mp3" },
+    { name: "Splinter [prod. Ichigo]", src: "https://od.lk/s/MThfNDE0MTIxMjdf/Splinter%20%5Bprod.%20Ichigo%5D.mp3" },
+    { name: "bleed lean [prod. Ichigo]", src: "https://od.lk/s/MThfNDE0MTIxMjhf/bleed%20lean%20%5Bprod.%20Ichigo%5D.mp3" },
+    { name: "Mary Jane [prod. Ichigo]", src: "https://od.lk/s/MThfNDE0MTIxMzJf/Mary%20Jane.mp3" },
+    { name: "Will He [prod. Ichigo]", src: "https://od.lk/s/MThfNDE0MTIxMzRf/Will%20He.mp3" },
+    { name: "Dreamin' [prod. Ichigo]", src: "https://od.lk/s/MThfNDE0MTIxMzVf/Dreamin%27.mp3" }
+];
+
 export default function MusicPlayer() {
     const [currentMusicIndex, setCurrentMusicIndex] = useState(0);
     const handleClickPrevious = () => {
@@ -39,6 +50,38 @@ export default function MusicPlayer() {
                 showSkipControls={true}
                 showJumpControls={false}
                 src={playlist[currentMusicIndex].src}
+                onClickPrevious={handleClickPrevious}
+                onClickNext={handleClickNext}
+                preload="none"
+            />
+        </div>
+    );
+}
+
+export function MusicPlayerIchigo() {
+    const [currentMusicIndex, setCurrentMusicIndex] = useState(0);
+    const handleClickPrevious = () => {
+        currentMusicIndex === 0
+            ? setCurrentMusicIndex(playlistIchigo.length - 1)
+            : setCurrentMusicIndex(currentMusicIndex - 1);
+    };
+    const handleClickNext = () => {
+        currentMusicIndex < playlistIchigo.length - 1
+            ? setCurrentMusicIndex(currentMusicIndex + 1)
+            : setCurrentMusicIndex(0);
+    };
+
+    return (
+        <div className="max-w-2xl mx-auto px-4 pb-4 pt-2">
+            <p className="flex items-center justify-center pb-2">
+                {playlistIchigo[currentMusicIndex].name}
+            </p>
+            <AudioPlayer
+                onEnded={handleClickNext}
+                autoPlayAfterSrcChange={true}
+                showSkipControls={true}
+                showJumpControls={false}
+                src={playlistIchigo[currentMusicIndex].src}
                 onClickPrevious={handleClickPrevious}
                 onClickNext={handleClickNext}
                 preload="none"
