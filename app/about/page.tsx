@@ -44,7 +44,7 @@ export default function About() {
                             Creating Node.js scripts to interact with an NFT<span>&#39;</span>s metadata and pushing updates to Solana
                         </li>
                         <li>
-                            Review Solidity smart contract code, providing feedback to aid in code auditing based on various tests and troubleshooting
+                            Reviewing Solidity smart contract code, providing feedback to aid in code auditing based on various tests and troubleshooting
                             methods
                         </li>
                         <li>
@@ -109,7 +109,7 @@ export default function About() {
                     interconnected on a global scale - there is no debate that the future is digital.
                 </p>
                 <p className="prose text-black px-2 pb-2">
-                    I believe that the fundamentals in which this world should build upon itself should be open-source, interconnected decentralized applications that empower ownership, accessibility,
+                    I believe that the fundamentals in which this world should build itself upon should be open-source, interconnected decentralized applications that empower ownership, accessibility,
                     transparency, and accountability.The ethos of cryptocurrency and blockchain technologies perfectly align with my beliefs. I believe in the futurist embrace of the emerging
                     hyperreality latent within the web<span>&#39;</span>s accelerated networks, the cypherpunk movement, and the notion that access to Internet, access to stable currency, and data
                     privacy should be inalienable rights.
@@ -141,7 +141,7 @@ export default function About() {
                     </li>
                     <li>
                         My all-time favourite movies (excluding Star Wars and LOTR because they<span>&#39;</span>re goated) include: Trainspotting, The Hidden Fortress, A Clockwork Orange, V for Vendetta, Blade, What We Do in the Shadows,
-                        Whisper of the Heart, Kiki<span>&#39;</span>s Delivery Service, From Up on Poppy Hill, The Big Lebowski, Hot Fuzz, Seven Samurai, La Haine, Blade Runner 2049
+                        Whisper of the Heart, Kiki<span>&#39;</span>s Delivery Service, From Up on Poppy Hill, The Big Lebowski, Hot Fuzz, Seven Samurai, La Haine, and Blade Runner 2049
                     </li>
                 </ul>
             </div>
