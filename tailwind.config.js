@@ -28,6 +28,7 @@ module.exports = {
           css: {
             p: {
               minWidth: "100%",
+              marginTop: "0.5rem"
             }
           }
         },
@@ -35,6 +36,10 @@ module.exports = {
           css: {
             h1: {
               marginBottom: "0.5rem",
+            },
+            h2: {
+              marginBottom: "0.5rem",
+              marginTop: "1.5rem",
             },
             p: {
               marginBottom: "0.5rem",

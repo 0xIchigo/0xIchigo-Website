@@ -50,7 +50,7 @@ export default async function Post({ params }: { params: { postId: string } }) {
                 <div className="prose italic px-2 pb-2 ml-4">
                     published on {pubDate}
                 </div>
-                <article className="text-black p-2 prose prose-lg ml-4">
+                <article className="text-black p-2 prose prose-lg min-w-full">
                     <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
                 </article>
                 <p className="pb-2">
