@@ -31,7 +31,7 @@ export default function Projects() {
                 <div className="prose px-2 pt-2 min-w-full mb-2">
                     <h2 className="flex flex-row items-center mb-2">
                         <a href="https://github.com/0xIchigo/Data-Structures-and-Algorithms-in-Rust" className="mr-2">
-                            Data Structures and Algorithms in Rust
+                            DSA in Rust
                         </a>
                         <FaRust
                             className="ml-2"
@@ -64,7 +64,7 @@ export default function Projects() {
                 <div className="prose px-2 pt-2 min-w-full mb-2">
                     <h2 className="flex flex-row items-center mb-2">
                         <a href="https://github.com/0xIchigo/Data-Structures-and-Algorithms-in-Rust" className="mr-2">
-                            This website!
+                            Portfolio/Blog
                         </a>
                         <SiNextdotjs
                             className="ml-2"
@@ -85,7 +85,7 @@ export default function Projects() {
                     <p className="prose text-black">
                         The purpose of this site is to have a slice of cyberspace that consolidates my personal portfolio and blog in a surreal browsing experience. This site
                         is largely built with Next.js and TypeScript, using Tailwind CSS for styling and pnpm for managing dependencies. The background for the site was created
-                        in Three.js, and all blogposts are written in markdown, but are converted to HTML using the gray-matter and remark npm packages.
+                        in Three.js, and all blogposts are written in markdown, which are then converted to HTML using the gray-matter and remark npm packages.
                     </p>
                 </div>
             </div>
