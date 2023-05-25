@@ -1,11 +1,14 @@
 import "./globals.css";
-import Navbar from "./components/Navbar";
+//import Navbar from "./components/Navbar";
 //import Background from "./components/Background";
-import ProfilePic from "./components/ProfilePic";
-import Footer from "./components/Footer";
+//import ProfilePic from "./components/ProfilePic";
+//import Footer from "./components/Footer";
 
 import dynamic from "next/dynamic";
 const Background = dynamic(() => import("./components/Background"), { ssr: false });
+const Navbar = dynamic(() => import("./components/Navbar"));
+const ProfilePic = dynamic(() => import("./components/ProfilePic"));
+const Footer = dynamic(() => import("./components/Footer"))
 
 
 export const metadata = {

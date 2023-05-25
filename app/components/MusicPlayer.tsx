@@ -41,7 +41,7 @@ export default function MusicPlayer() {
 
     return (
         <div className="max-w-2xl mx-auto p-4">
-            <p className="flex items-center justify-center pb-2">
+            <p className="text-center pb-2">
                 {playlist[currentMusicIndex].name}
             </p>
             <AudioPlayer
@@ -73,7 +73,7 @@ export function MusicPlayerIchigo() {
 
     return (
         <div className="max-w-2xl mx-auto px-4 pb-4 pt-2">
-            <p className="flex items-center justify-center pb-2">
+            <p className="text-center pb-2">
                 {playlistIchigo[currentMusicIndex].name}
             </p>
             <AudioPlayer

@@ -122,9 +122,9 @@ export default function About() {
                     inevitable revolutionize various sectors of life.
                 </p>
                 <p className="prose text-black px-2 pb-2 min-w-full">
-                    I believe that the fundamentals in which this world should build itself upon should be open-source, interconnected decentralized applications that empower ownership, accessibility,
-                    transparency, and accountability.The ethos of cryptocurrency and blockchain technologies perfectly align with my beliefs. I believe in the futurist embrace of the emerging
-                    hyperreality latent within the web<span>&#39;</span>s accelerated networks, the cypherpunk movement, global access to stable currency, and data privacy as an inalienable human right.
+                    I believe that the fundamentals in which this world should build itself upon should be open source, composable, decentralized applications that empower ownership, accessibility,
+                    transparency, and accountability. The ethos of cryptocurrency and blockchain technologies perfectly align with my beliefs. I believe in the futurist embrace of the emerging
+                    hyperreality latent within the web<span>&#39;</span>s accelerated networks, the cypherpunk movement, global access to stable currency, and data privacy as an intrinsic human right.
                 </p>
                 <p className="prose text-black px-2 pb-2 min-w-full">
                     I dream of a future wherein the organization and coordination of finance, governance, intelligence, entertainment, and, ultimately, human development can be done in a genuinely open and
@@ -138,25 +138,27 @@ export default function About() {
                         Interests -<span className="font-Aurebesh"> Interests</span>
                     </h2>
                 </div>
-                <p className="prose text-black px-2 pb-2">
-                    <li>
-                        I really enjoy outdoor activities such as hiking, fishing, kayaking, and camping
-                    </li>
-                    <li>
-                        My favourite Magic: the Gathering Decks to play in Commander are Miirym, Sentinel Wyrm (create a bunch of dragon tokens), and Prosper, Tome-Bound
-                        (create a bunch of treasure tokens)
-                    </li>
-                    <li>
-                        I am a black belt (1st Dan) in Shotokan Karate. My favourite katas are Kanku Dai, Jion, and Enpi
-                    </li>
-                    <li>
-                        I am currently reading The Sirens of Titan by Kurt Vonnegut
-                    </li>
-                    <li>
-                        My all-time favourite movies (excluding Star Wars and LOTR because they<span>&#39;</span>re goated) include: Trainspotting, The Hidden Fortress, A Clockwork Orange, V for Vendetta, Blade, What We Do in the Shadows,
-                        Whisper of the Heart, Kiki<span>&#39;</span>s Delivery Service, From Up on Poppy Hill, The Big Lebowski, Hot Fuzz, Seven Samurai, La Haine, and Blade Runner 2049
-                    </li>
-                </p>
+                <div className="prose text-black px-2 pb-2">
+                    <ul className="list-none p-0">
+                        <li>
+                            I really enjoy outdoor activities such as hiking, fishing, kayaking, and camping
+                        </li>
+                        <li>
+                            My favourite Magic: the Gathering Decks to play in Commander are <a href="https://edhrec.com/commanders/miirym-sentinel-wyrm">Miirym, Sentinel Wyrm</a> (create a bunch of dragon tokens),
+                            and <a href="https://edhrec.com/commanders/prosper-tome-bound">Prosper, Tome-Bound</a> (create a bunch of treasure tokens)
+                        </li>
+                        <li>
+                            I am a black belt (1st Dan) in Shotokan Karate. My favourite katas are Kanku Dai, Jion, and Enpi
+                        </li>
+                        <li>
+                            I am currently reading The Sirens of Titan by Kurt Vonnegut
+                        </li>
+                        <li>
+                            My all-time favourite movies (excluding Star Wars, Harry Potter, and LOTR because they<span>&#39;</span>re goated) include: Trainspotting, The Hidden Fortress, A Clockwork Orange, V for Vendetta, Blade, What We Do in the Shadows,
+                            Whisper of the Heart, Kiki<span>&#39;</span>s Delivery Service, From Up on Poppy Hill, The Big Lebowski, Hot Fuzz, Seven Samurai, La Haine, and Blade Runner 2049
+                        </li>
+                    </ul>
+                </div>
             </div>
             <hr className="h-px my-4 w-48 bg-white border border-white" />
             <div className="bg-white border border-dark-green m-1 mt-2">
