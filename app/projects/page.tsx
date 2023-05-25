@@ -63,7 +63,7 @@ export default function Projects() {
                 </div>
                 <div className="prose px-2 pt-2 min-w-full mb-2">
                     <h2 className="flex flex-row items-center mb-2">
-                        <a href="https://github.com/0xIchigo/Data-Structures-and-Algorithms-in-Rust" className="mr-2">
+                        <a href="https://github.com/0xIchigo/0xIchigo-Website" className="mr-2">
                             Portfolio/Blog
                         </a>
                         <SiNextdotjs
