@@ -3,7 +3,10 @@
 import { useState, useEffect } from "react";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { SpaceWarp } from "./SpaceWarp";
+//import { SpaceWarp } from "./SpaceWarp";
+
+import dynamic from "next/dynamic";
+const SpaceWarp = dynamic(() => import("./SpaceWarp").then(mod => mod.SpaceWarp), { ssr: false });
 
 const useWindowSize = () => {
   const [size, setSize] = useState([window.innerHeight, window.innerWidth]);
