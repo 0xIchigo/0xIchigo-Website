@@ -34,7 +34,7 @@ export default function About() {
                         Jan. 2022 - Present
                     </p>
                     <p className="prose px-2 min-w-full">
-                        Technologies: TypeScript, JavaScript, Node.js, React.js, Rust, Soldity, Git, GitHub
+                        Technologies: TypeScript, JavaScript, Node.js, React.js, Rust, Soldity, C#, Git, GitHub
                     </p>
                     <p className="prose px-2 text-black min-w-full">
                         Completed contract work for various Web3 and cryptographic projects, DAOs, and companies, which includes work such as:
@@ -65,7 +65,7 @@ export default function About() {
                         Sep. 2022 - May 2023
                     </p>
                     <p className="prose px-2 min-w-full">
-                        Technologies: Next.js, TypeScript, Node.js, Tailwind CSS, Git, GitHub, Rust
+                        Technologies: Next.js, TypeScript, Node.js, Jest, Tailwind CSS, Git, GitHub, Rust
                     </p>
                     <ul className="prose text-black px-2 pb-2 min-w-full">
                         <li>
