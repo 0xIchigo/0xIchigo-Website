@@ -1,5 +1,5 @@
 import { FaPython, FaRust } from "react-icons/fa";
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPnpm } from "react-icons/si";
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPnpm, SiSolidity } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
 
 
@@ -7,13 +7,13 @@ export default function Projects() {
 
     return (
         <main className="flex flex-col justify-center items-center p-4 max-w-5xl mx-auto">
-            <div className="bg-white border border-dark-green m-1 min-w-[65%]">
+            <div className="bg-white border border-dark-green m-1 min-w-[75%]">
                 <div className="bg-dark-green">
                     <h1 className="prose text-white px-2">
                         Projects -<span className="font-Aurebesh"> projects</span>
                     </h1>
                 </div>
-                <div className="prose px-2 pt-2 min-w-full mb-2">
+                <div className="prose px-4 pt-2 min-w-full mb-2">
                     <h2 className="flex flex-row items-center mb-2">
                         <a href="https://github.com/0xIchigo/IchiChain" className="mr-2">
                             IchiChain
@@ -28,7 +28,22 @@ export default function Projects() {
                         GitHub repo includes a high-level overview on blockchains, Proof of Stake (PoS), and how to use IchiChain.
                     </p>
                 </div>
-                <div className="prose px-2 pt-2 min-w-full mb-2">
+                <div className="prose px-4 pt-2 min-w-full mb-2">
+                    <h2 className="flex flex-row items-center mb-2">
+                        <a href="https://github.com/0xIchigo/Ethernaut" className="mr-2">
+                            Ethernaut
+                        </a>
+                        <SiSolidity
+                            className="ml-2"
+                        />
+                    </h2>
+                    <p className="prose text-black">
+                        Solutions to Ethernaut, OpenZeppelin<span>&#39;</span>s Web3/Solidity wargame. The goal of this repository is to provide clear, easy to follow solutions
+                        to each Ethernaut level thereby allowing newcomers, and all others ineterested, to learn about common vulnerabilities, patterns and security considerations
+                        in Solidity.
+                    </p>
+                </div>
+                <div className="prose px-4 pt-2 min-w-full mb-2">
                     <h2 className="flex flex-row items-center mb-2">
                         <a href="https://github.com/0xIchigo/Data-Structures-and-Algorithms-in-Rust" className="mr-2">
                             DSA in Rust
@@ -46,7 +61,7 @@ export default function Projects() {
                         considerations in place of runtime complexity.
                     </p>
                 </div>
-                <div className="prose px-2 pt-2 min-w-full mb-2">
+                <div className="prose px-4 pt-2 min-w-full mb-2">
                     <h2 className="flex flex-row items-center mb-2">
                         <a href="https://github.com/0xIchigo/Breakout" className="mr-2">
                             Breakout
@@ -61,7 +76,7 @@ export default function Projects() {
                         the project has been posted on my Twitter.
                     </p>
                 </div>
-                <div className="prose px-2 pt-2 min-w-full mb-2">
+                <div className="prose px-4 pt-2 min-w-full mb-2">
                     <h2 className="flex flex-row items-center mb-2">
                         <a href="https://github.com/0xIchigo/0xIchigo-Website" className="mr-2">
                             Portfolio/Blog
