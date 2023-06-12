@@ -39,7 +39,6 @@ module.exports = {
             },
             h2: {
               marginBottom: "0.5rem",
-              marginTop: "1.5rem",
             },
             p: {
               marginBottom: "0.5rem",
