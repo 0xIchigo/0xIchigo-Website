@@ -28,7 +28,42 @@ module.exports = {
           css: {
             p: {
               minWidth: "100%",
-              marginTop: "0.5rem"
+              marginTop: "0.5rem",
+              marginBottom: "0.5rem",
+              code: {
+                backgroundColor: "#b9d9b7",
+                paddingRight: "0.25rem",
+                paddingLeft: "0.25rem",
+                '&::before': {
+                  content: '"" !important',
+                },
+                '&::after': {
+                  content: '"" !important',
+                },
+              },
+              img: {
+                display: "block",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }
+            },
+            pre: {
+              backgroundColor: "#b9d9b7",
+              color: "#000000",
+            },
+            code: {
+              backgroundColor: "#b9d9b7",
+              color: "#000000",
+              '&::before': {
+                content: '"" !important',
+              },
+              '&::after': {
+                content: '"" !important',
+              },
+            },
+            h2: {
+              marginTop: "1rem",
+              marginBottom: "1rem",
             }
           }
         },
