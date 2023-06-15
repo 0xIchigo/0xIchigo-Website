@@ -50,16 +50,12 @@ module.exports = {
             pre: {
               backgroundColor: "#b9d9b7",
               color: "#000000",
+              
             },
             code: {
               backgroundColor: "#b9d9b7",
               color: "#000000",
-              '&::before': {
-                content: '"" !important',
-              },
-              '&::after': {
-                content: '"" !important',
-              },
+
             },
             h2: {
               marginTop: "1rem",
@@ -81,12 +77,7 @@ module.exports = {
                 backgroundColor: "#b9d9b7",
                 paddingRight: "0.25rem",
                 paddingLeft: "0.25rem",
-                '&::before': {
-                  content: '"" !important',
-                },
-                '&::after': {
-                  content: '"" !important',
-                },
+
               }
             },
             pre: {
