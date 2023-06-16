@@ -55,13 +55,32 @@ module.exports = {
             code: {
               backgroundColor: "#b9d9b7",
               color: "#000000",
-
+              paddingRight: "0.25rem",
+              paddingLeft: "0.25rem",
+              '&::before': {
+                content: '"" !important',
+                position: "absolute",
+                top: "0",
+                bottom: "0",
+                left: "0",
+                width: "0.25rem",
+                backgroundColor: "transparent"
+              },
+              '&::after': {
+                content: '"" !important',
+                position: "absolute",
+                top: "0",
+                bottom: "0",
+                left: "0",
+                width: "0.25rem",
+                backgroundColor: "transparent"
+              },
             },
             h2: {
-              marginTop: "1rem",
+              marginTop: "2rem",
               marginBottom: "1rem",
-            }
-          }
+            },
+          },
         },
         lg: {
           css: {
