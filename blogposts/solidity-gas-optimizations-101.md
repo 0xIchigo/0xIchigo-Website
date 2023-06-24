@@ -1,14 +1,14 @@
 ---
 title: "Solidity Gas Optimizations 101"
 author: "0xIchigo"
-date: "2023-06-17"
+date: "2023-06-24"
 tags: Solidity, Gas, Solidity Gas Optimizations, Mana, Optimizations, EVM, Ethereum
 ---
 ## Becoming an Optimizoor
 
 Gas is bad, but it is a necessary evil that powers the Ethereum network. As a Solidity developer, you should do everything in your power to reduce unnecessary gas costs; a user shouldn't have to suffer from poorly written code. Those who wage war against this economic Leviathan are colloquially referred to as Optimizoors.
 
-It is a common misconception that optimized code is often hard to read. Yes, as a developer, it's easy to spend countless hours going from rabbit hole to rabbit hole coding the most elegant solution to your problem, and that jaw-dropping piece of code is not necessarily nice to read. However, as you'll see throughout this blog post, there are a number of elegant optimizations that are both easy to implement and easy to read. Sure, I can rewrite most of my smart contract in Yul to make it extremely gas efficient, but I also have a higher likelihood of introducing various security vulnerabilities by adding unnecessary complexity. True Optimizoors are able to strike a tasteful balance between Solidity and Yul, sanity and craziness, decipherable code and near-indecipherable code. The key to writing clean Solidity code is to have a deep understanding of how the code is executed, and write code that optimizes in accordance to this execution.
+It is a common misconception that optimized code is often hard to read. Yes, as a developer, it's easy to spend countless hours going from rabbit hole to rabbit hole coding the most elegant solution to your problem, and that jaw-dropping piece of code is not necessarily nice to read. However, as you'll see throughout this blog post, there are a number of elegant optimizations that are both easy to implement and easy to read. Sure, I can rewrite most of my smart contract in Yul to make it extremely gas efficient, but I also have a higher likelihood of introducing different security vulnerabilities to my smart contract by adding unnecessary complexity. True Optimizoors are able to strike a tasteful balance between Solidity and Yul, sanity and craziness, decipherable code and near-indecipherable code. The key to writing clean Solidity code is to have a deep understanding of how the code is executed, and write code that optimizes in accordance to this execution.
 
 The goal of this post is to start you down the path of an Optimizoor. We'll do a quick overview of gas and the EVM before introducing a number of gas-saving techniques. So, you want to become an Optimizoor? Are you ready to Pop Punk Not Pills? Let's brush up on gas.
 
@@ -97,9 +97,9 @@ Although rarely used in production, anonymous events are interesting insofar the
 ## Optimizing Variables
 
 ### Knowing Variable Permanent Values
-If you're developing a smart contract and already know the permanent value of a variable then declare it as `constant`. As an aside, you could go one step further and delare your constants as `private` to save gas during deployment. This is because when constants are marked as `public`, extra getter functions are created for them, which increases deployment cost. Consider marking your `constant` variables as `private` to save deployment costs where applicable. 
+If you're developing a smart contract and already know the permanent value of a variable then declare it as `constant`. You could go one step further and delare your constants as `private` to save gas during deployment. This is because when constants are marked as `public`, extra getter functions are created for them, which increases deployment cost. Consider marking your `constant` variables as `private` to save deployment costs where applicable. 
 
-If you want to assign a variable a permanent value at the time of construction then declare it as `immutable`. Using `constant` and `immutable` declarations where applicable saves gas since both get directly embedded into the bytecode, thus saving an `SLOAD` opcode call:
+If you want to assign a variable a permanent value at the time of construction then declare it as `immutable`. Using `constant` and `immutable` declarations where applicable saves gas since both get directly embedded into the bytecode, therefore saving a `SLOAD` opcode call to load the variable:
 ```
 contract OptimizedVariables {
     uint256 private constant x = 1000;
@@ -113,10 +113,10 @@ contract OptimizedVariables {
 
 If you don't know the permanent value of a variable and, for example, are dealing with an arbitrary length raw byte data or string, you should use the `bytes` value type. If, however, you know that you can limit the length to a maximum of 32 characters then use a value of `bytes1` to `bytes32` to save gas. This is important to know as contracts using a version of Solidity before 0.8.4 do not have access to custom errors. Thus, `require` strings longer than 32 bytes would cost extra gas - each extra memory word of bytes past the original 32 incurs an `MSTORE` which costs 3 gas. This also applies to `revert` strings. Overall, shorter `require` / `revert` strings can save deployment time as well as runtime costs. If you are using >=0.8.4, it is recommended to use custom errors instead.
 
-If you know the permenent value of a variable will be zero, do not explicitly initialize it - `uints` are 0 by default, for example. Adding in an initialization to zero will increase both contract size and increase gas.
+If you know the permenent value of a variable will be zero, do not explicitly initialize it. Adding in an initialization to zero, or another default value, will increase both contract size and gas.
 
 ### Caching Variables
-If you need to look up a variable's value more than once, consider caching it. For example, `<array>.length` should not be looked up every iteration of a `for` loop. Caching the array length will save gas since it'll avoid an `MLOAD` every loop for arrays stored in `memory`, an `SLOAD` for arrays stored in `storage`, and `CALLDATALOAD` for arrays stored in `calldata`. With the array length cached, the `SLOAD` / `MLOAD` / `CALLDATALOAD` operation is only called once and each subsequent call is a cheaper `dupN` instruction. Yes, `MLOAD`, `CALLDATALOAD`, and `dupN` have the same gas cost however `MLOAD` and `CALLDATALOAD` require an additional `dupN` call to put the offset in the stack.
+If you need to look up a variable's value more than once, consider caching it. For example, `<array>.length` should not be looked up every iteration of a `for` loop. Caching the array length will save gas since it'll avoid an `MLOAD` every loop for arrays stored in `memory`, an `SLOAD` for arrays stored in `storage`, and `CALLDATALOAD` for arrays stored in `calldata`. With the array length cached, the `MLOAD` / `SLOAD` / `CALLDATALOAD` operation is only called once and each subsequent call is a cheaper `dupN` instruction. Yes, `MLOAD`, `CALLDATALOAD`, and `dupN` have the same gas cost however `MLOAD` and `CALLDATALOAD` require an additional `dupN` call to put the offset in the stack.
 
 Caching is also useful for multiple accesses of a mapping or array. For instance, caching a mapping's value in a local `storage` or `calldata` variable when the value is accessed multiple times reduces gas per access since the EVM does not have to recalculate the key's keccack256 hash. Caching is also useful for saving the value of a function call rather than calling the function multiple times.
 
@@ -131,16 +131,16 @@ Knowing how the EVM stores variables is crucial to reducing gas costs - the more
 ```
 // Takes up three slots
 contract NotOptimized {
-    uint128 x;
-    uint256 y;
-    uint128 z;
+    uint128 x; // Slot 0
+    uint256 y; // Slot 1
+    uint128 z; // Slot 2
 }
 
 // Packed into two slots
 contract Optimized {
-    uint128 x;
-    uint128 z;
-    uint256 y;
+    uint128 x; // Slot 0
+    uint128 z; // Slot 0
+    uint256 y; // Slot 1
 }
 ```
 
@@ -178,7 +178,7 @@ function loop_unchecked_plusplus() public pure returns (uint256 sum) {
 ### Bit Shifting For Multiplication and Division
 Both multiplication and division by two can be achieved via bit shifting as `x * 2 == x << 1` and `x / 2 == x >> 1`. The `MUL` and `DIV` opcodes both cost 5 gas whereas `SHL` and `SHR` both cost 3 gas. It's vital to note that if you are going to use bit shifting as a replacement for division by 2, this will bypass Solidity's division by zero prevention check. 
 
-This concept can be applied to the multiplication and division of other numbers (e.g., shifting left by 5 instead of multiplying 32) however things can get complicated very quickly. It is one of those instances where you must make the decision between saving gas and code complexity. 
+This concept can be applied to the multiplication and division of other numbers (e.g., shifting left by 5 instead of multiplying 32) however things can get complicated very quickly. It is another one of those instances where you must make the decision between saving gas and code complexity. 
 
 ## Conditionals
 
@@ -196,7 +196,7 @@ Optimized: require(case2 && case1, "Failed")
 An Optimizoor always tries to make sure that if a transaction is going to revert then it should revert as early as possible. When a transaction reverts the user pays gas up until the revert was executed, not afterwards. It is also good practice to follow the [Checks-Effects-Interactions Pattern](https://docs.soliditylang.org/en/v0.6.11/security-considerations.html#use-the-checks-effects-interactions-pattern), so, naturally, these checks should be happening near the top of a function anyways. If not, make sure to move them where applicable.
 
 ### Costly Checks
-The outcome of some conditions can be known without being executed and therefore do not need to be evaluated - including them would only increaes gas costs. An example of this is the following check:
+The outcome of some conditions can be known without being executed and therefore do not need to be evaluated - including them would only increase gas costs. An example of this is the following check:
 ```
 if (x > 1000) {
     if (x > 500) {
@@ -214,7 +214,7 @@ if (x < 0) {
     }
 }
 ```
-If `x < 0` is satisfied, then `x > 100` can never be true therefore making this snippet dead code. The inclusion of dead code and opaque predicates can be very expensive. Of course these examples are pretty elementary and will (hopefully) not reproduce themselves out in the wild, but be mindful of this possibility and thoroughly test your smart contract for these costly errors. For more costly patterns, I urge you to check out the article ["Under-Optimized Smart Contracts Devour Your Money"](https://arxiv.org/pdf/1703.03994.pdf).
+If `x < 0` is satisfied, then `x > 100` can never be true therefore making this snippet dead code. The inclusion of dead code and opaque predicates can be very expensive. Of course these examples are pretty elementary and will (hopefully) not reproduce themselves out in the wild, but be mindful of this possibility and thoroughly test your smart contract for these types of costly checks. For more costly patterns, I urge you to check out the article ["Under-Optimized Smart Contracts Devour Your Money"](https://arxiv.org/pdf/1703.03994.pdf).
 
 ### Ternary Operator
 There are instances where a ternary operator can be used in place of an if-else statement to save a modest amount of gas. [Trader Joe's C4 report](https://code4rena.com/reports/2022-10-traderjoe#gas-optimizations) outlines a few instances, such as:
@@ -223,7 +223,9 @@ Not Optimized:
 
 if (x == 0) return type(uint256).max;
 return leastSignificantBit(x) + bit;
+
 ------------------------------------
+
 Optimized:
 
 return (x == 0) ? type(uint256).max : leastSignificantBit(x) + bit;
@@ -254,7 +256,7 @@ modifier onlyOwner() {
 ## Functions
 
 ### Payable Functions
-Payable functions are cheaper than non-payable functions as they require extra opcodes to check if an EOA or another contract is trying to send Ether to it, and revert the transaction if so. Payable functions don't require these extra opcodes as they are allowed to receive the Ether. This can be useful for functions guaranteed to revert when called by normal users. For example, if you have a function that can only be used by the owner of the smart contract consider marking it `payable`. If a normal user tries to call this function then it'll revert, and if the owner uses this function then it'll be cheaper to use since it lacks the extra checks to see whether a payment was provided. So, where applicable, declare your functions as `payable`.
+Non-payable functions are more expensive than payable functions as they require extra opcodes to check if an EOA or another contract is trying to send Ether to them, and revert the transaction if so. Payable functions don't require these extra opcodes as they are allowed to receive Ether. This can be useful for functions guaranteed to revert when called by normal users. For example, if you have a function that can only be used by the owner of the smart contract consider marking it `payable`. If a normal user tries to call this function then it'll revert, and if the owner uses this function then it'll be cheaper for them since it lacks the extra checks to see whether a payment was provided. So, where applicable, declare your functions as `payable`.
 
 You can also cut out 10 opcodes in the creation-time EVM bytecode if you declare a `constructor()` as `payable`. This is due to the fact `payable` removes the need for an inital check of `msg.value == 0`, saving 13 gas on deployment with no pertinent security risks.
 
@@ -278,9 +280,9 @@ function optimizeMe(uint256 value, uint256 value2, bytes32 value3) external {}
 Function signature: "optimizeMe(uint256,uint256,bytes32)"
 Function selector: 0xfd25287f
 ```
-The compiler sorts all of a contract's functions by their selector in hexadecimal order, and goes over each of them when a function was executed to see which selector was called. Thus, it makes sense to try and put the most used functions near the top of this list to save gas on searching for the called function. I'd recommend taking this into consideration when naming a function that'll be called frequently during the smart contract's lifetime.
+The compiler sorts all of a contract's functions by their selector in hexadecimal order, and goes over each of them when a function was executed to see which selector was called. Thus, it makes sense to try and put the most used functions near the top of this list to save gas when searching for the called function. I'd recommend taking this into consideration when naming a function that'll be called frequently during the smart contract's lifetime.
 
 ## Solidity Gas Optimizations 101
-Congrats Optimizoor, you've passed Solidity Gas Optimizations 101. Now that you know the basics, put them to good use! Being an Optimizoor is being a life-long learner, knowing to optimize or not to optimize.
+Congrats Optimizoor, you've passed Solidity Gas Optimizations 101. An Optimizoor is a life-long learner tasked with the impossible goal of making your code as performant as possible. Now that you know the basics of optimizing Solidity smart contracts, put them to good use fellow Optimizoor! 
 
-If you've read this far, thank you anon! If you want to keep up to date with my latest ramblings my [Twitter](https://twitter.com/0xIchigo) is a good place to start. I'd also like to give a big shoutout to [Harrison](https://twitter.com/PopPunkOnChain), the legendary Pop Punk gas detective himself, and giga-brain 100x auditooor [bl0ckpain](https://twitter.com/bl0ckpain), for reading over an early draft of this blogpost. 
+If you've read this far, thank you anon! If you want to keep up to date with my latest ramblings my [Twitter](https://twitter.com/0xIchigo) is a good place to start. I'd also like to give a big shoutout to [Harrison](https://twitter.com/PopPunkOnChain), the legendary Pop Punk gas detective himself, and giga-brain 100x auditooor [bl0ckpain](https://twitter.com/bl0ckpain), for reading over earlier drafts of this blogpost. 
