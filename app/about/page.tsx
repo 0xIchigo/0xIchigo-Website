@@ -55,6 +55,9 @@ export default function About() {
                         <li>
                             Creating a custom NFT art generation algorithm to create collections based on complex inclusion/exclusion trait rulesets
                         </li>
+                        <li>
+                            Creating a Solana-based FPS in C# and Unity
+                        </li>
                     </ul>
                 </div>
                 <div className="min-w-full">
@@ -151,11 +154,10 @@ export default function About() {
                             I am a black belt (1st Dan) in Shotokan Karate. My favourite katas are Kanku Dai, Jion, and Enpi
                         </li>
                         <li>
-                            I am currently reading The Sirens of Titan by Kurt Vonnegut
+                            I am currently reading Radical Markets: Uprooting Capitalism and Democracy for a Just Society by Eric A. Posner and Eric Glen Weyl
                         </li>
                         <li>
-                            My all-time favourite movies (excluding Star Wars, Harry Potter, and LOTR because they<span>&#39;</span>re goated) include: Trainspotting, The Hidden Fortress, A Clockwork Orange, V for Vendetta, Blade, What We Do in the Shadows,
-                            Whisper of the Heart, Kiki<span>&#39;</span>s Delivery Service, From Up on Poppy Hill, The Big Lebowski, Hot Fuzz, Seven Samurai, La Haine, and Blade Runner 2049
+                            If I had to order the Three Flavours Cornetto trilogy from my favourite to least favourite I<span>&#39;</span>d order them: Hot Fuzz, Shaun of the Dead, The World<span>&#39;</span>s End
                         </li>
                     </ul>
                 </div>
