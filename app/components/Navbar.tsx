@@ -8,7 +8,7 @@ export default function Navbar() {
                     <Link href="/" className="sm:text-2xl text-lg font-semibold text-white hover:text-orange mr-2 no-underline">0xIchigo</Link>
                     <div className="flex space-x-4">
                         <Link href="/about" className="text-white sm:text-xl text-lg no-underline">About</Link>
-                        <Link href="/projects" className="text-white sm:text-xl text-lg no-underline">Projects</Link>
+                        <Link href="/code" className="text-white sm:text-xl text-lg no-underline">Code</Link>
                         <Link href="/blog" className="text-white sm:text-xl text-lg no-underline">Blog</Link>
                     </div>
                 </div>
