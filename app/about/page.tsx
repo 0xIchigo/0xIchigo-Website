@@ -12,8 +12,8 @@ export default function About() {
                 </div>
                 <p className="prose text-black px-2 pb-2">
                     Hello! My name is Evan, but online I go by the pseudonym Ichigo. I am a self-taught developer interested in all things blockchain,
-                    cybersecurity, and smart contracts. I am currently learning how to audit Solidity smart contracts, and familiarizing myself with
-                    technologies such as Docker and AWS
+                    cybersecurity, and smart contracts. I am currently learning how to write Solana programs in Anchor, and am diving into more advanced
+                    Rust coding
                 </p>
                 <p className="prose text-black px-2 pb-2">
                     TLDR; I code, audit, and optimize stuff on the blockchain
