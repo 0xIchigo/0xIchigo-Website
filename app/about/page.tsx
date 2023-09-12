@@ -28,10 +28,27 @@ export default function About() {
                 </div>
                 <div className="mb-2 min-w-full">
                     <h2 className="prose px-2 min-w-full">
+                        Developer Experience Engineer @ Helius
+                    </h2>
+                    <p className="prose px-2 min-w-full">
+                        Sept. 2023 - Present
+                    </p>
+                    <p className="prose px-2 min-w-full">
+                        Technologies: TypeScript, JavaScript, Node.js, React.js, Rust, Git, GitHub
+                    </p>
+                    <p className="prose px-2 text-black min-w-full">
+                        Very open-ended role with the overall goal of improving the Solana developer experience. Whether that be coding for the Helius TypeScript SDK, making tutorials/blogposts, speaking at confrences, etc. who knows!
+                    </p>
+                    <p className="prose px-2 text-black min-w-full">
+                        Check back in the future to see what I have achieved :)
+                    </p>
+                </div>
+                <div className="mb-2 min-w-full">
+                    <h2 className="prose px-2 min-w-full">
                         Freelance Software Developer
                     </h2>
                     <p className="prose px-2 min-w-full">
-                        Jan. 2022 - Present
+                        Jan. 2022 - Present (currently on hiatus)
                     </p>
                     <p className="prose px-2 min-w-full">
                         Technologies: TypeScript, JavaScript, Node.js, React.js, Rust, Soldity, C#, Git, GitHub

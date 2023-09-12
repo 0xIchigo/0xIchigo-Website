@@ -13,10 +13,13 @@ export default function Projects() {
                         Projects
                     </h2>
                     <p className="prose ml-2 px-2 text-black min-w-full">
-                        <a href="https://www.solape.io/">Solape</a>: An OpenBook Solana DEX built by apes, for apes
+                        <a className="cursor-not-allowed">Community Carnage</a>: An upcoming Solana based FPS
                     </p>
                     <p className="prose ml-2 px-2 text-black min-w-full">
-                        <a href="https://www.solape.io/" className="cursor-not-allowed">Community Carnage</a>: An upcoming Solana based FPS
+                        <a href="https://www.helius.dev/">Helius</a>: Solana<span>&#39;</span>s most loved RPC Nodes, APIs, Webhooks, and Data
+                    </p>
+                    <p className="prose ml-2 px-2 text-black min-w-full">
+                        <a href="https://www.solape.io/">Solape</a>: An OpenBook Solana DEX built by apes, for apes
                     </p>
                 </div>
                 <div className="prose text-black px-2 pb-2 min-w-full">
