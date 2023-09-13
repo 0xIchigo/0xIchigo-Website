@@ -285,4 +285,4 @@ The compiler sorts all of a contract's functions by their selector in hexadecima
 ## Solidity Gas Optimizations 101
 Congrats Optimizoor, you've passed Solidity Gas Optimizations 101. An Optimizoor is a life-long learner tasked with the impossible goal of making your code as performant as possible. Now that you know the basics of optimizing Solidity smart contracts, put them to good use fellow Optimizoor! 
 
-If you've read this far, thank you anon! If you want to keep up to date with my latest ramblings my [Twitter](https://twitter.com/0xIchigo) is a good place to start. I'd also like to give a big shoutout to [Harrison](https://twitter.com/PopPunkOnChain), the legendary Pop Punk gas detective himself, and giga-brain 100x auditooor [bl0ckpain](https://twitter.com/bl0ckpain), for reading over earlier drafts of this blogpost. 
+If you've read this far, thank you anon! If you want to keep up to date with my latest ramblings my [Twitter](https://twitter.com/0xIchigo) is a good place to start. I'd also like to give a big shoutout to giga-brain 100x auditooor [bl0ckpain](https://twitter.com/bl0ckpain) for reading over earlier drafts of this blogpost. 
