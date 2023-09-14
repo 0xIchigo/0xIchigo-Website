@@ -33,6 +33,18 @@ export default function Blog() {
                             Published September 13, 2023
                         </p>
                     </p>
+                    <p className="prose text-black min-w-full">
+                        <a 
+                            href="https://www.helius.dev/blog/what-is-token-2022" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Updated the Confidential Transfers Section for the What is Token-2022? Article
+                        </a>
+                        <p className="prose text-sm ml-4">
+                            Published September 14, 2023
+                        </p>
+                    </p>
                 </div>
             </div>
         </main>
