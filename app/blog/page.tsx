@@ -45,6 +45,18 @@ export default function Blog() {
                             Published September 14, 2023
                         </p>
                     </p>
+                    <p className="prose text-black min-w-full">
+                        <a 
+                            href="https://www.helius.dev/blog/all-you-need-to-know-about-solana-and-quic" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            How to Mitigate Spam QUICkly: All You Need to Know About Solana and QUIC
+                        </a>
+                        <p className="prose text-sm ml-4">
+                            Published September 18, 2023
+                        </p>
+                    </p>
                 </div>
             </div>
         </main>
