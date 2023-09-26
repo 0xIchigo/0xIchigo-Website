@@ -69,6 +69,18 @@ export default function Blog() {
                             Published September 21, 2023
                         </p>
                     </p>
+                    <p className="prose text-black min-w-full">
+                        <a 
+                            href="https://www.helius.dev/blog/cryptographic-tools-101-hash-functions-and-merkle-trees-explained" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Cryptographic Tools 101 - Hash Functions and Merkle Trees Explained
+                        </a>
+                        <p className="prose text-sm ml-4">
+                            Published September 25, 2023
+                        </p>
+                    </p>
                 </div>
             </div>
         </main>
