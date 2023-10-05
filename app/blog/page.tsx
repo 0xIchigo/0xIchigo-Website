@@ -81,6 +81,18 @@ export default function Blog() {
                             Published September 25, 2023
                         </p>
                     </p>
+                    <p className="prose text-black min-w-full">
+                        <a 
+                            href="https://www.helius.dev/blog/all-you-need-to-know-about-compression-on-solana" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            All You Need to Know About Compression on Solana
+                        </a>
+                        <p className="prose text-sm ml-4">
+                            Published October 3, 2023
+                        </p>
+                    </p>
                 </div>
             </div>
         </main>
