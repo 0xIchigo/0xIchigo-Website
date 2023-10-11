@@ -93,6 +93,18 @@ export default function Blog() {
                             Published October 3, 2023
                         </p>
                     </p>
+                    <p className="prose text-black min-w-full">
+                        <a 
+                            href="https://www.helius.dev/blog/all-you-need-to-know-about-solanas-v1-16-update" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            All You Need to Know About Solana<span>&#39;</span>s v1.16 Update
+                        </a>
+                        <p className="prose text-sm ml-4">
+                            Published October 6, 2023
+                        </p>
+                    </p>
                 </div>
             </div>
         </main>
