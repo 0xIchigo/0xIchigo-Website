@@ -105,6 +105,18 @@ export default function Blog() {
                             Published October 6, 2023
                         </p>
                     </p>
+                    <p className="prose text-black min-w-full">
+                        <a 
+                            href="https://www.helius.dev/blog/solana-geyser-plugins-streaming-data-at-the-speed-of-light" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Solana Geyser Plugins: Streaming Data at the Speed of Light
+                        </a>
+                        <p className="prose text-sm ml-4">
+                            Published October 14, 2023
+                        </p>
+                    </p>
                 </div>
             </div>
         </main>
