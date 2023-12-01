@@ -141,6 +141,18 @@ export default function Blog() {
                             Published November 10, 2023
                         </p>
                     </p>
+                    <p className="prose text-black min-w-full">
+                        <a 
+                            href="https://www.helius.dev/blog/what-is-firedancer" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            What is Firedancer? A Deep Dive into Solana 2.0
+                        </a>
+                        <p className="prose text-sm ml-4">
+                            Published November 29, 2023
+                        </p>
+                    </p>
                 </div>
             </div>
         </main>
