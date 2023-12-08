@@ -32,6 +32,9 @@ export default function Projects() {
                     <p className="prose ml-2 px-2 text-black min-w-full">
                         <a href="https://github.com/denoland/deno_lint" className="whitespace-nowrap">Deno Lint</a>: Blazing fast linter for JavaScript and TypeScript written in Rust
                     </p>
+                    <p className="prose ml-2 px-2 text-black min-w-full">
+                        <a href="https://github.com/proxycapital/solana-civ">SolanaCiv</a>: Fully on-chain 4x strategy game, inspired by Sid Meier<span>&#39;</span>s Civilization
+                    </p>
                 </div>
                 <div className="prose text-black px-2 pb-2 min-w-full">
                     <h2 className="mt-2 mb-0 px-2">
