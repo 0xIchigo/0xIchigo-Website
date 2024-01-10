@@ -35,6 +35,9 @@ export default function Projects() {
                     <p className="prose ml-2 px-2 text-black min-w-full">
                         <a href="https://github.com/proxycapital/solana-civ">SolanaCiv</a>: Fully on-chain 4x strategy game, inspired by Sid Meier<span>&#39;</span>s Civilization
                     </p>
+                    <p className="prose ml-2 px-2 text-black min-w-full">
+                        <a href="https://github.com/helius-labs/xray">XRAY</a>: A human-readable Solana transaction explorer powered by Helius
+                    </p>
                 </div>
                 <div className="prose text-black px-2 pb-2 min-w-full">
                     <h2 className="mt-2 mb-0 px-2">

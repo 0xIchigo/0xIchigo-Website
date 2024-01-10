@@ -153,6 +153,42 @@ export default function Blog() {
                             Published November 29, 2023
                         </p>
                     </p>
+                    <p className="prose text-black min-w-full">
+                        <a 
+                            href="https://www.helius.dev/blog/gaming-how-solana-is-changing-the-playfield" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Gaming: How Solana is Changing the Playfield
+                        </a>
+                        <p className="prose text-sm ml-4">
+                            Published December 11, 2023
+                        </p>
+                    </p>
+                    <p className="prose text-black min-w-full">
+                        <a 
+                            href="https://www.helius.dev/blog/priority-fees-understanding-solanas-transaction-fee-mechanics" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Priority Fees: Understanding Solana<span>&#39;</span>s Transaction Fee Mechanics
+                        </a>
+                        <p className="prose text-sm ml-4">
+                            Published December 13, 2023
+                        </p>
+                    </p>
+                    <p className="prose text-black min-w-full">
+                        <a 
+                            href="https://www.helius.dev/blog/how-to-migrate-from-ethereum-to-solana" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            How to Migrate From Ethereum to Solana: A Guide for Devs
+                        </a>
+                        <p className="prose text-sm ml-4">
+                            Published December 28, 2023
+                        </p>
+                    </p>
                 </div>
             </div>
         </main>
