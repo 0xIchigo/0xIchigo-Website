@@ -189,6 +189,30 @@ export default function Blog() {
                             Published December 28, 2023
                         </p>
                     </p>
+                    <p className="prose text-black min-w-full">
+                        <a 
+                            href="https://www.helius.dev/blog/an-introduction-to-anchor-a-beginners-guide-to-building-solana-programs" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            An Introduction to Anchor: A Beginner<span>&#39;</span>s Guide to Building Solana Programs
+                        </a>
+                        <p className="prose text-sm ml-4">
+                            Published January 31, 2024
+                        </p>
+                    </p>
+                    <p className="prose text-black min-w-full">
+                        <a 
+                            href="https://www.helius.dev/blog/all-you-need-to-know-about-solanas-v1-17-update" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            All You Need to Know About Solana<span>&#39;</span>s v1.17 Update
+                        </a>
+                        <p className="prose text-sm ml-4">
+                            Published February 13, 2024
+                        </p>
+                    </p>
                 </div>
             </div>
         </main>
