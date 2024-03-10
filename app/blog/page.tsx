@@ -22,7 +22,7 @@ export default function Blog() {
                     </h2>
                 </div>
                 <div className="p-4">
-                    {blogPosts.map((post, index) => (
+                    {blogPosts.map((post: BlogPost, index) => (
                         <div key={index} className="prose text-black min-w-full">
                             <a href={post.link} target="_blank" rel="noopener noreferrer">
                                 {post.name}
