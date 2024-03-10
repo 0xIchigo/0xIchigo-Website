@@ -92,8 +92,8 @@ const blogPosts: BlogPost[] = [
     },
     {
         name: "Futarchy and Governance: Prediction Markets Meet DAOs on Solana",
-        link: "March 8, 2024",
-        date: "https://www.helius.dev/blog/futarchy-and-governance-prediction-markets-meet-daos-on-solana",
+        link: "https://www.helius.dev/blog/futarchy-and-governance-prediction-markets-meet-daos-on-solana",
+        date: "March 8, 2024",
     },
 ];
 

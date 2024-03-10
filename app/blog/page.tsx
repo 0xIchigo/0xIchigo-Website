@@ -1,4 +1,5 @@
 import Posts from "../components/Posts";
+import blogPosts, { BlogPost } from "@/lib/blogPosts";
 
 export default function Blog() {
     return (
@@ -21,6 +22,16 @@ export default function Blog() {
                     </h2>
                 </div>
                 <div className="p-4">
+                    {blogPosts.map((post, index) => (
+                        <div key={index} className="prose text-black min-w-full">
+                            <a href={post.link} target="_blank" rel="noopener noreferrer">
+                                {post.name}
+                            </a>
+                            <p className="prose text-sm ml-4">
+                                Published {post.date}
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </main>
