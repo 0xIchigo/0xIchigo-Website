@@ -95,6 +95,16 @@ const blogPosts: BlogPost[] = [
         link: "https://www.helius.dev/blog/futarchy-and-governance-prediction-markets-meet-daos-on-solana",
         date: "March 8, 2024",
     },
+    {
+        name: "A Hitchhiker's Guide to Solana Program Security",
+        link: "https://www.helius.dev/blog/a-hitchhikers-guide-to-solana-program-security",
+        date: "March 18, 2024",
+    },
+    {
+        name: "A Guide to Testing Solana Programs",
+        link: "https://www.helius.dev/blog/a-guide-to-testing-solana-programs",
+        date: "April 4, 2024",
+    }
 ];
 
 export default blogPosts;
