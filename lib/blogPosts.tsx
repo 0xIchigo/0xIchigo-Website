@@ -104,6 +104,11 @@ const blogPosts: BlogPost[] = [
         name: "A Guide to Testing Solana Programs",
         link: "https://www.helius.dev/blog/a-guide-to-testing-solana-programs",
         date: "April 4, 2024",
+    },
+    {
+        name: "Stake-Weighted Quality of Service: Everything You Need to Know",
+        link: "https://www.helius.dev/blog/stake-weighted-quality-of-service-everything-you-need-to-know",
+        date: "June 1, 2024",
     }
 ];
 
