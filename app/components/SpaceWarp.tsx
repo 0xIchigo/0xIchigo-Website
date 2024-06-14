@@ -53,7 +53,10 @@ export const SpaceWarp = ({ }: SceneProps) => {
     useFrame((state, delta) => {
         if (!meshRef.current) return;
 
-        const velocity = 1 / Math.pow(state.clock.elapsedTime + 1, state.clock.elapsedTime + 1);
+        const elapsedTime = state.clock.elapsedTime;
+        const initialDeceleration = 1 / Math.pow(elapsedTime + 3, elapsedTime + 3);
+        const stableVelocity = 0.05;
+        const velocity = elapsedTime < 21 ? initialDeceleration : stableVelocity;
 
         for (let i = 0; i < COUNT; i++) {
             meshRef.current.getMatrixAt(i, temp);
@@ -63,7 +66,7 @@ export const SpaceWarp = ({ }: SceneProps) => {
             tempPos.setFromMatrixPosition(temp);
 
             if (tempPos.z > Z_BOUNDS / 2) {
-                tempPos.z = -Z_BOUNDS / 2;
+                tempPos.z = -Z_BOUNDS / 2 + Math.random() * Z_BOUNDS;
             } else {
                 tempPos.z += Math.max(delta, velocity * MAX_SPEED_FACTOR);
             }
