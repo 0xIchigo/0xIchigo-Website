@@ -114,6 +114,16 @@ const blogPosts: BlogPost[] = [
         name: "All You Need to Know About Solana's v1.18 Update",
         link: "https://www.helius.dev/blog/all-you-need-to-know-about-solanas-v1-18-update",
         date: "June 10, 2024",
+    },
+    {
+        name: "Zero-Knowledge Proofs: An Introduction to the Fundamentals",
+        link: "https://www.helius.dev/blog/zero-knowledge-proofs-an-introduction-to-the-fundamentals",
+        date: "July 25, 2024",
+    },
+    {
+        name: "Zero-Knowledge Proofs: Its Applications on Solana",
+        link: "https://www.helius.dev/blog/zero-knowledge-proofs-its-applications-on-solana",
+        date: "July 26, 2024",
     }
 ];
 
